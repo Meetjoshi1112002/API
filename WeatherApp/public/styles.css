@@ -1,0 +1,71 @@
+body {
+    background-color: #333; /* Dark theme background color */
+    color: #fff; /* Light text on dark background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #555; /* Contrasting background color */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 40vw;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    flex-grow: 1;
+    margin:0 3vw;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50; /* Green button color */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather-container {
+    background-color: #777; /* Contrasting background color */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+.weather-details {
+    text-align: left;
+}
+/* Add this to your existing CSS file */
+
+.weather-icon {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 10px; /* Add some spacing below the icon */
+}
+
+/* Rest of your existing CSS */

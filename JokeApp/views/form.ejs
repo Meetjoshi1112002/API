@@ -1,0 +1,66 @@
+<%- include("partials/head.ejs") %> 
+
+<% if(locals.create){ %>
+
+    <!-- 2nd Div -->
+    <div id="div2" class="container">
+    <form id="getJokeForm" method="post" action="/getJoke">
+        <h2>GET JOKE</h2>
+        <input type="text" name="blackListFlags" placeholder="blackListFlags" >
+        <input type="text" name="type" placeholder="type">
+        <input type="text" name="catagory" placeholder="Category">
+        <input type="text" name="amount" placeholder="amount">
+        <input type="text" name="contains" placeholder="contains">
+        <input type="text" name="idRange" placeholder="id Range">
+
+        <button id="submitBtn">Submit</button>
+    </form>
+    </div>
+
+<% }else{ %>
+
+    <div id="div2" class="container">
+        <form id="getJokeForm" method="post" action="/createJoke">
+            <h2>Create JOKE</h2>
+            <label for="flags">Blacklist Flags:</label>
+            <select id="blackListFlags" name="flags" multiple>
+            <!-- Add options here -->
+            <option value="nsfw">nsfw</option>
+            <option value="religious">religious</option>
+            <option value="political">political</option>
+            <option value="racist">racist</option>
+            <option value="sexist">sexist</option>
+            <option value="explicit">explicit</option>
+            </select>
+            <div>
+                <input type="checkbox" id="option1" name="flags" value="nsfw">
+                <label for="option1" class="custom-radio">nsfw</label>
+          
+                <input type="checkbox" id="option2" name="flags" value="religious">
+                <label for="option2" class="custom-radio">religious</label>
+          
+                <input type="checkbox" id="option3" name="flags" value="political">
+                <label for="option3" class="custom-radio">political</label>
+
+                <input type="checkbox" id="option3" name="flags" value="racist">
+                <label for="option3" class="custom-radio">racist</label>
+
+                <input type="checkbox" id="option3" name="flags" value="sexist">
+                <label for="option3" class="custom-radio">sexist</label>
+
+                <input type="checkbox" id="option3" name="flags" value="explicit">
+                <label for="option3" class="custom-radio">explicit</label>
+              </div>
+            <input type="text" name="type" placeholder="type">
+            <input type="text" name="catagory" placeholder="Category">
+            <input type="text" name="joke" placeholder="joke">
+    
+            <button id="submitBtn">Submit</button>
+        </form>
+        </div>
+
+    
+    <!-- Add other input fields as needed -->
+<% } %> 
+
+<%- include("partials/foot.ejs") %>

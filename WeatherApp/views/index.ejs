@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form method="post" action="/">
+                <input type="text"  placeholder="Enter city name" name="city"/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <% if(locals.obj){ %>
+
+        <div class="weather-container">
+            <img src="<%= obj.icon %>" alt="Weather Icon" class="weather-icon">
+            <div class="weather-details">
+                <h2>City Name : <%= obj.name %></h2>
+                <p>Description : <%= obj.description %></p>
+                <p>Current Temp <%= obj.curr_temp %></p>
+                <p>Max Temp:  <%= obj.max_temp %></p>
+                <p>Min Temp <%= obj.min_temp %></p>
+            </div>
+        </div>
+
+    <% }else{ %>
+
+        <div class="weather-container">
+            <h1>No Data to display</h1>
+        </div>
+
+    <% } %>
+    </div>
+</body>
+</html>
